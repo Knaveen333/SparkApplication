@@ -10,8 +10,7 @@ object DataFrame_Tasks {
 
       val df = spark.read.format("csv").option("header","true").option("inferSchema","true").load("C:\\Users\\Naveen\\IdeaProjects\\SparkDemo\\spark-warehouse\\emp_data.csv")
       df.show()
-      val df1 = df.select("emp_id","e_name","DOJ")
-      df1.show()
+      df.select("emp_id","e_name","DOJ")
+      df.show()
   }
-
 }
